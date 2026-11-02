@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.astro/
+.env*
+!.env.example
+.DS_Store
+
+# Local discovery, agency context and review evidence
+AGENTS.md
+PRODUCT.md
+docs/
+sources/
+assets/source/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/surfaces/

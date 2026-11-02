@@ -1,0 +1,92 @@
+---
+import '@fontsource/tenor-sans/latin-400.css';
+import '@fontsource/archivo/latin-400.css';
+import '@fontsource/archivo/latin-500.css';
+import '@fontsource/archivo/latin-600.css';
+import '../styles/global.css';
+const phone = 'tel:+14808601993';
+const map = 'https://www.google.com/maps/search/?api=1&query=Alex+Martin+DDS+10752+N+89th+Place+Scottsdale+AZ+85260';
+const services = [
+  { title: 'General & Family Dentistry', text: 'Make room for regular care. Talk with our office about cleanings, exams, and fillings for you and your family.', id: 'family-dentistry' },
+  { title: 'Dental Crowns', text: 'When a tooth needs more support, start with an examination and a conversation about your options for restorative care.', id: 'dental-crowns' },
+  { title: 'Dental Implants', text: 'Missing a tooth or thinking about replacing several? Meet with Dr. Martin to discuss dental implants and what may be right for your smile.', id: 'dental-implants' },
+  { title: 'More Ways To Care For Your Smile', text: 'Our practice also offers cosmetic dentistry, clear aligners, periodontal care, and emergency dentistry. Call to discuss the care you are looking for.', id: 'more-care' },
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Dentist In Scottsdale, AZ | Alex Martin, DDS</title>
+    <meta name="description" content="Get to know Alex Martin, DDS in Scottsdale. General and family dentistry, dental crowns, and dental implants. Call our office to plan your visit." />
+    <meta name="theme-color" content="#23434f" />
+    <link rel="icon" href="/images/logo.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip To Content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="Alex Martin DDS — Back to top"><img src="/images/logo.svg" alt="Alex Martin, DDS" width="264" height="83" /></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav"><span>Menu</span><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 8h16M4 16h16" /></svg></button>
+        <nav id="main-nav" aria-label="Main navigation">
+          <a href="#our-practice">Our Practice</a>
+          <a href="#dental-care">Dental Care</a>
+          <a href="#your-visit">Your Visit</a>
+          <a class="button header-call" href={phone}>Call (480) 860-1993</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="introduction" id="top" aria-labelledby="intro-title">
+        <div class="opening page-inset">
+          <h1 id="intro-title">A Closer Look At<br />Your Dental Home.</h1>
+          <p>General and family dentistry, with dental implants and personal attention in Scottsdale.</p>
+        </div>
+        <div class="photo-story">
+          <figure class="photo-entry"><img src="/images/entrance.webp" alt="A patient opening the door to Alex Martin DDS in Scottsdale" width="1920" height="1013" fetchpriority="high" /><figcaption>Come On In</figcaption></figure>
+          <figure class="photo-room"><img src="/images/operatory.webp" alt="A treatment room inside the Alex Martin DDS office" width="814" height="560" /><figcaption>A Place For Your Care</figcaption></figure>
+          <figure class="photo-outside"><img src="/images/office-exterior.webp" alt="The entrance and Alex Martin DDS sign at the Scottsdale office" width="771" height="680" /><figcaption>Here In Scottsdale</figcaption></figure>
+        </div>
+        <div class="photo-note page-inset"><span>Alex Martin, DDS · Scottsdale, Arizona</span><span>Our office, from the door to the dental chair.</span></div>
+      </section>
+      <section class="care-band page-inset" aria-labelledby="care-intro">
+        <h2 id="care-intro">For Everyday Care.<br />And What Comes Next.</h2>
+        <p>From cleanings and fillings to crowns and dental implants, start a conversation about your care.</p>
+        <a class="text-link light-link" href={phone}>Talk With Our Office <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a>
+      </section>
+      <section class="practice page-inset" id="our-practice" aria-labelledby="practice-title">
+        <div class="practice-photo"><img src="/images/dr-martin.webp" alt="Dr. Alex Martin" width="400" height="560" loading="lazy" /><p>Dr. Alex Martin, DDS</p></div>
+        <div class="practice-copy">
+          <h2 id="practice-title">Meet Dr. Alex Martin.</h2>
+          <p>Dr. Martin and his team put your comfort at the center of your care. His approach includes ongoing education in dental procedures and a focus on helping patients feel at ease.</p>
+          <p>Whether it’s time for a cleaning or you have something specific on your mind, a conversation is a good place to begin.</p>
+          <a class="text-link" href="#your-visit">Plan A Visit <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg></a>
+        </div>
+      </section>
+      <section class="services page-inset" id="dental-care" aria-labelledby="services-title">
+        <div class="services-intro"><h2 id="services-title">Care That Starts<br />With You.</h2><p>Everyday essentials and options for what comes next. Explore our care, then talk with us about your needs.</p></div>
+        <div class="service-list">
+          {services.map((service) => <details id={service.id}><summary><h3>{service.title}</h3><svg class="plus" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 12h16M12 4v16" /></svg></summary><div class="service-content"><p>{service.text}</p><a href={phone}>Call About Your Care</a></div></details>)}
+        </div>
+      </section>
+      <section class="visit" id="your-visit" aria-labelledby="visit-title">
+        <div class="visit-copy"><h2 id="visit-title">We’re Here<br />In Scottsdale.</h2><p>Call our office to arrange an appointment or ask a question about your visit.</p><a class="phone-link" href={phone}>(480) 860-1993</a><address>10752 N. 89th Place, Suite A-107<br />Scottsdale, AZ 85260</address><a class="text-link" href={map} target="_blank" rel="noopener noreferrer">Get Directions <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" /></svg><span class="sr-only"> (opens in a new tab)</span></a></div>
+        <figure class="visit-photo"><div class="location-frame"><img src="/images/parking-exterior.webp" alt="View of the Alex Martin DDS office building from the parking lot" width="814" height="560" loading="lazy" /></div><figcaption>10752 N. 89th Place · Scottsdale</figcaption></figure>
+      </section>
+    </main>
+    <footer class="site-footer page-inset"><a class="footer-brand" href="#top"><img src="/images/logo.svg" alt="Alex Martin, DDS — Back to top" width="264" height="83" /></a><div><p>General & Family Dentistry In Scottsdale</p><a href={phone}>(480) 860-1993</a></div><p class="copyright">© {new Date().getFullYear()} Alex Martin, DDS</p></footer>
+    <a class="mobile-call" href={phone}><span>Call To Plan Your Visit</span><span>(480) 860-1993</span></a>
+    <script>
+      const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+      const nav = document.querySelector<HTMLElement>('#main-nav');
+      function closeMenu() { toggle?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('is-open'); }
+      toggle?.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') !== 'true'; toggle.setAttribute('aria-expanded', String(open)); nav?.classList.toggle('is-open', open); });
+      nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') { closeMenu(); toggle.focus(); } });
+      document.addEventListener('click', event => { if (event.target instanceof Node && !document.querySelector('.site-header')?.contains(event.target)) closeMenu(); });
+      window.matchMedia('(min-width: 761px)').addEventListener('change', closeMenu);
+    </script>
+  </body>
+</html>

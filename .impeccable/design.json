@@ -1,0 +1,272 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T17:51:19.611382+00:00",
+  "title": "Design System: Alex Martin DDS",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "primary",
+        "displayName": "Practice Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0123 224.40)",
+          "oklch(26% 0.0258 224.40)",
+          "oklch(38% 0.0405 224.40)",
+          "oklch(49% 0.0430 224.40)",
+          "oklch(61% 0.0430 224.40)",
+          "oklch(72% 0.0405 224.40)",
+          "oklch(84% 0.0258 224.40)",
+          "oklch(95% 0.0123 224.40)"
+        ]
+      },
+      "sage": {
+        "role": "secondary",
+        "displayName": "Brand Sage",
+        "tonalRamp": [
+          "oklch(15% 0.0110 131.31)",
+          "oklch(26% 0.0231 131.31)",
+          "oklch(38% 0.0364 131.31)",
+          "oklch(49% 0.0386 131.31)",
+          "oklch(61% 0.0386 131.31)",
+          "oklch(72% 0.0364 131.31)",
+          "oklch(84% 0.0231 131.31)",
+          "oklch(95% 0.0110 131.31)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Photo Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0000 0.00)",
+          "oklch(26% 0.0000 0.00)",
+          "oklch(38% 0.0000 0.00)",
+          "oklch(49% 0.0000 0.00)",
+          "oklch(61% 0.0000 0.00)",
+          "oklch(72% 0.0000 0.00)",
+          "oklch(84% 0.0000 0.00)",
+          "oklch(95% 0.0000 0.00)"
+        ]
+      },
+      "wash": {
+        "role": "neutral",
+        "displayName": "Quiet Wash",
+        "tonalRamp": [
+          "oklch(15% 0.0024 128.56)",
+          "oklch(26% 0.0051 128.56)",
+          "oklch(38% 0.0081 128.56)",
+          "oklch(49% 0.0086 128.56)",
+          "oklch(61% 0.0086 128.56)",
+          "oklch(72% 0.0081 128.56)",
+          "oklch(84% 0.0051 128.56)",
+          "oklch(95% 0.0024 128.56)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Soft Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0044 151.73)",
+          "oklch(26% 0.0093 151.73)",
+          "oklch(38% 0.0146 151.73)",
+          "oklch(49% 0.0154 151.73)",
+          "oklch(61% 0.0154 151.73)",
+          "oklch(72% 0.0146 151.73)",
+          "oklch(84% 0.0093 151.73)",
+          "oklch(95% 0.0044 151.73)"
+        ]
+      },
+      "ink-hover": {
+        "role": "primary",
+        "displayName": "Ink Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0133 223.05)",
+          "oklch(26% 0.0279 223.05)",
+          "oklch(38% 0.0439 223.05)",
+          "oklch(49% 0.0465 223.05)",
+          "oklch(61% 0.0465 223.05)",
+          "oklch(72% 0.0439 223.05)",
+          "oklch(84% 0.0279 223.05)",
+          "oklch(95% 0.0133 223.05)"
+        ]
+      },
+      "focus": {
+        "role": "secondary",
+        "displayName": "Focus Green",
+        "tonalRamp": [
+          "oklch(15% 0.0181 131.25)",
+          "oklch(26% 0.0380 131.25)",
+          "oklch(38% 0.0597 131.25)",
+          "oklch(49% 0.0634 131.25)",
+          "oklch(61% 0.0634 131.25)",
+          "oklch(72% 0.0597 131.25)",
+          "oklch(84% 0.0380 131.25)",
+          "oklch(95% 0.0181 131.25)"
+        ]
+      },
+      "caption-muted": {
+        "role": "neutral",
+        "displayName": "Muted Caption",
+        "tonalRamp": [
+          "oklch(15% 0.0099 160.02)",
+          "oklch(26% 0.0207 160.02)",
+          "oklch(38% 0.0326 160.02)",
+          "oklch(49% 0.0346 160.02)",
+          "oklch(61% 0.0346 160.02)",
+          "oklch(72% 0.0326 160.02)",
+          "oklch(84% 0.0207 160.02)",
+          "oklch(95% 0.0099 160.02)"
+        ]
+      },
+      "disclosure-rule": {
+        "role": "neutral",
+        "displayName": "Disclosure Rule",
+        "tonalRamp": [
+          "oklch(15% 0.0063 152.06)",
+          "oklch(26% 0.0132 152.06)",
+          "oklch(38% 0.0208 152.06)",
+          "oklch(49% 0.0220 152.06)",
+          "oklch(61% 0.0220 152.06)",
+          "oklch(72% 0.0208 152.06)",
+          "oklch(84% 0.0132 152.06)",
+          "oklch(95% 0.0063 152.06)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Main homepage heading; responsive overrides are in DESIGN.md."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service disclosure headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Practice, service, and visit prose."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Compact caption-rail text."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "anchor-scroll",
+        "value": "smooth",
+        "purpose": "Anchor scrolling; auto for reduced motion."
+      },
+      {
+        "name": "disclosure-icon",
+        "value": "transform .25s ease-out",
+        "purpose": "Rotate the plus icon 45 degrees when open; no transition for reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-min",
+        "value": "1700px"
+      },
+      {
+        "name": "tablet-max",
+        "value": "1100px"
+      },
+      {
+        "name": "mobile-max",
+        "value": "760px"
+      },
+      {
+        "name": "narrow-max",
+        "value": "360px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Call Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The actual masthead telephone action.",
+      "html": "<a class=\"ds-button\" href=\"tel:+14808601993\">Call (480) 860-1993</a>",
+      "css": ".ds-button{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:inline-flex;align-items:center;justify-content:center;background:var(--ink,#23434f);color:#fff;min-height:50px;padding:16px 20px;white-space:nowrap;font-size:15px;text-decoration:none}.ds-button:hover{background:#355966;text-decoration:none}.ds-button:focus-visible{outline:3px solid #61764f;outline-offset:4px}"
+    },
+    {
+      "name": "Editorial Text Link",
+      "kind": "button",
+      "refersTo": "text-link",
+      "description": "The practice-section anchor with an open-stroke arrow.",
+      "html": "<a class=\"ds-text-link\" href=\"#your-visit\">Plan A Visit <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\" /></svg></a>",
+      "css": ".ds-text-link{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:inline-flex;align-items:center;gap:20px;justify-content:space-between;border-bottom:1px solid var(--ink,#23434f);padding-block:10px;font-size:17px;min-height:44px;width:fit-content;text-decoration:none}.ds-text-link:hover{border-bottom-width:2px}.ds-text-link:focus-visible{outline:3px solid #61764f;outline-offset:5px}.ds-text-link svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "Light Editorial Text Link",
+      "kind": "button",
+      "refersTo": "text-link-light",
+      "description": "The care-band call link on its implemented dark background.",
+      "html": "<div class=\"ds-dark-surface\"><a class=\"ds-light-link\" href=\"tel:+14808601993\">Talk With Our Office <svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path d=\"M4 12h15M13 6l6 6-6 6\" /></svg></a></div>",
+      "css": ".ds-dark-surface{background:var(--ink,#23434f);padding:29px}.ds-light-link{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);color:#fff;display:inline-flex;align-items:center;gap:20px;justify-content:space-between;border-bottom:1px solid var(--sage,#a0ae95);padding-block:10px;font-size:17px;min-height:44px;width:fit-content;white-space:nowrap;text-decoration:none}.ds-light-link:hover{border-bottom-width:2px}.ds-light-link:focus-visible{outline:3px solid #fff;outline-offset:5px}.ds-light-link svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}"
+    },
+    {
+      "name": "Desktop Section Navigation",
+      "kind": "nav",
+      "description": "The actual desktop section links; responsive disclosure behavior is documented in DESIGN.md and requires the page script.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"#our-practice\">Our Practice</a><a href=\"#dental-care\">Dental Care</a><a href=\"#your-visit\">Your Visit</a></nav>",
+      "css": ".ds-nav{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:flex;align-items:center;gap:35px;font-size:15px;background:#fff}.ds-nav>a{padding-block:15px;color:inherit;text-decoration:none}.ds-nav>a:hover{text-decoration:underline;text-underline-offset:5px}.ds-nav>a:focus-visible{outline:3px solid #61764f;outline-offset:5px}@media(max-width:1100px){.ds-nav{gap:21px;font-size:14px}}"
+    },
+    {
+      "name": "Service Disclosure",
+      "kind": "custom",
+      "refersTo": "service-disclosure",
+      "description": "Native service disclosure with its working open/close icon state and source copy.",
+      "html": "<div class=\"ds-service-list\"><details><summary><h3>General &amp; Family Dentistry</h3><svg class=\"ds-plus\" viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M4 12h16M12 4v16\" /></svg></summary><div class=\"ds-service-content\"><p>Make room for regular care. Talk with our office about cleanings, exams, and fillings for you and your family.</p><a href=\"tel:+14808601993\">Call About Your Care</a></div></details></div>",
+      "css": ".ds-service-list{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);background:var(--wash,#eef1eb);border-top:1px solid #a3b1a6}.ds-service-list details{border-bottom:1px solid #a3b1a6}.ds-service-list summary{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:27px 0;cursor:pointer;list-style:none}.ds-service-list summary::-webkit-details-marker{display:none}.ds-service-list h3{font-family:var(--display,'Tenor Sans',sans-serif);font-weight:400;font-size:clamp(23px,2vw,29px);line-height:1.25;letter-spacing:-.015em;margin:0;text-wrap:balance}.ds-plus{flex-shrink:0;transition:transform .25s ease-out}.ds-service-list details[open] .ds-plus{transform:rotate(45deg)}.ds-service-list svg{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.ds-service-content{padding:0 45px 27px 0}.ds-service-content p{font-size:17px;max-width:55ch;line-height:1.65;margin:0}.ds-service-content a{color:inherit;display:inline-block;font-size:15px;margin-top:14px;padding-block:8px;text-decoration:underline;text-underline-offset:4px}.ds-service-content a:hover{text-underline-offset:5px}.ds-service-content a:focus-visible{outline:3px solid #61764f;outline-offset:5px}.ds-service-list summary:focus-visible{outline:3px solid #61764f;outline-offset:5px}@media(max-width:760px){.ds-service-list h3{font-size:24px}.ds-service-list summary{padding-block:23px}.ds-service-content{padding-right:14px}.ds-service-content p{font-size:16px}}@media(max-width:360px){.ds-service-list h3{font-size:22px}}@media(prefers-reduced-motion:reduce){.ds-plus{transition:none}}"
+    },
+    {
+      "name": "Mobile Call Bar",
+      "kind": "custom",
+      "description": "The mobile telephone action; the sample uses the source visual treatment without viewport fixation so it remains reviewable in the panel.",
+      "html": "<a class=\"ds-mobile-call\" href=\"tel:+14808601993\"><span>Call To Plan Your Visit</span><span>(480) 860-1993</span></a>",
+      "css": ".ds-mobile-call{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:65px;padding:14px 20px max(14px,env(safe-area-inset-bottom));background:var(--ink,#23434f);color:#fff;font-size:13px;text-decoration:none}.ds-mobile-call span:last-child{font-weight:500;white-space:nowrap}.ds-mobile-call:focus-visible{outline:3px solid var(--sage,#a0ae95);outline-offset:-6px}.ds-mobile-call:hover{background:#355966;text-decoration:none}@media(max-width:360px){.ds-mobile-call{padding-inline:14px;font-size:12px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Scottsdale Journal",
+    "overview": "The Scottsdale Journal uses white photo-paper space, the original navy and sage identity, and rectangular photography to introduce the real practice. Tenor Sans gives headings an open, measured character; Archivo keeps supporting copy direct and readable. Thin rules and changes in background organize the page without ornamental containers.\n\nBryan selected this direction on the code-first direction board. This document captures the implemented homepage system; the completed homepage is still awaiting review and approval. The first-surface composition remains in `.impeccable/surfaces/src-pages-index-astro.md`. This record does not authorize additional pages or publication.",
+    "keyCharacteristics": [
+      "Original logo and navy/sage brand identity.",
+      "Real practice photographs with rectangular crops and compact captions.",
+      "Open display typography, readable body copy, and restrained rules.",
+      "Flat surfaces, visible keyboard focus, and minimal motion."
+    ],
+    "rules": [
+      {
+        "name": "The Brand Continuity Rule",
+        "body": "Preserve the original logo and its ink/sage relationship; the supporting neutrals serve the selected identity.",
+        "section": "colors"
+      },
+      {
+        "name": "The Readable Hierarchy Rule",
+        "body": "Keep display type for headings and the prominent phone number; use Archivo for navigation, body copy, captions, and ordinary actions.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the original logo and the selected navy/sage identity.",
+      "Do use actual practice imagery with meaningful alternatives and explicit image dimensions.",
+      "Do capitalize the first letter of each word in visible titles, headings, and subheadings while preserving proper names and acronyms.",
+      "Do preserve sticky navigation, visible keyboard focus, reduced-motion behavior, and responsive phone access.",
+      "Do keep contact actions honest: use verified phone and contact anchors until scheduling is verified."
+    ],
+    "donts": [
+      "Don't replace the chosen direction with generic rounded cards, shadows, or decorative gradients.",
+      "Don't add invented reviews, credentials, results, or business facts.",
+      "Don't add discounts, specials, coupon copy, or emergency-led hero headlines.",
+      "Don't add forms that appear connected without a working destination.",
+      "Don't treat direction selection as completed-homepage approval or permission to publish."
+    ]
+  }
+}
