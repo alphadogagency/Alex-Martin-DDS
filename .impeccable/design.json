@@ -171,9 +171,9 @@
         "purpose": "Button background and arrow movement; transitions disabled for reduced motion."
       },
       {
-        "name": "on-view-fade",
-        "value": "opacity 0 to 1, 650ms cubic-bezier(.2,.7,.3,1)",
-        "purpose": "One-shot doctor copy/portrait, services intro/list and reception photo fades. Initial viewport, focus/anchor targets and reduced motion are immediately visible; default content remains visible without enhancement."
+        "name": "directional-on-view-fade",
+        "value": "opacity0\u21921 and translate32px\u21920 (24px intermediate,18px phone),760ms cubic-bezier(.22,.8,.36,1),18% threshold",
+        "purpose": "Doctor split enters inward left/right on desktop; services and reception rise. All rise on compact screens. One-shot, no initial hero reveal; focus/anchor/reduced-motion/failure restore final state."
       }
     ],
     "breakpoints": [
@@ -264,7 +264,7 @@
       "Original logo and navy/sage brand identity.",
       "Real practice photography, softly rounded frames and compact captions.",
       "Open display typography, readable body copy, and restrained rules.",
-      "Flat surfaces, visible keyboard focus and purposeful reduced-motion-aware opacity fades."
+      "Flat surfaces, visible keyboard focus and purposeful reduced-motion-aware directional fade-and-slide entrances."
     ],
     "rules": [
       {

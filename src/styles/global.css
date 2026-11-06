@@ -102,3 +102,7 @@ address{font-style:normal;font-size:16px;line-height:1.7;margin:18px 0 14px}
 
 @media(max-width:360px){.brand img{width:170px}.menu-toggle{gap:7px}.hero-editorial h1{font-size:30px}.hero-photograph{height:210px}.mobile-call{padding-inline:14px;font-size:12px}.service-list h3{font-size:22px}.visit-copy{padding-inline:20px}.phone-link{font-size:28px}}
 @media(prefers-reduced-motion:reduce){:root{scroll-behavior:auto}.plus,.button,.button svg,.text-link svg{transition:none}.button:hover svg,.text-link:hover svg{transform:none}}
+
+/* JS applies this only to offscreen groups after successful observer setup. */
+.reveal-pending{opacity:0}
+@media(prefers-reduced-motion:reduce){.reveal-pending{opacity:1}}
