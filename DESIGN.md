@@ -14,9 +14,9 @@ colors:
 typography:
   display:
     fontFamily: "Tenor Sans, sans-serif"
-    fontSize: "clamp(50px,5.07vw,80px)"
+    fontSize: "clamp(42px,4.1vw,67px)"
     fontWeight: 400
-    lineHeight: 1.02
+    lineHeight: 1.06
     letterSpacing: "-.035em"
   headline:
     fontFamily: "Tenor Sans, sans-serif"
@@ -111,7 +111,7 @@ The display face supplies spacious, rounded letterforms without rounded containe
 
 ### Hierarchy
 
-- **Display:** the main heading uses the frontmatter display role. At widths up to (1100px), it uses `clamp(48px,5.4vw,65px)`; up to (760px), `clamp(36px,8.8vw,60px)` with line-height (1.08); up to (360px), (33px).
+- **Display:** the main heading uses the frontmatter display role. At widths up to (1100px), it uses `clamp(36px,4.3vw,47px)`; up to (760px), `clamp(34px,8.8vw,60px)` with line-height (1.1); up to (360px), (30px).
 - **Headline:** section headings use the frontmatter headline role. Compact band headings and mobile sections have context-specific overrides in the stylesheet.
 - **Title:** service titles use the frontmatter title role; mobile titles use (24px), reducing to (22px) at the narrowest breakpoint.
 - **Body:** most prose uses the body role, reducing to (16px) on mobile. Text measures vary with purpose: practice copy is limited to (54ch), service details to (55ch), and compact introductions to approximately (33–35ch).
@@ -123,9 +123,9 @@ The display face supplies spacious, rounded letterforms without rounded containe
 
 The canvas is fluid with a shared inline inset. Above (1700px), the body is centered with a maximum width of (1920px). The base desktop header is (100px) tall. Major content sections use generous vertical space: practice (110px), services (85px/100px), and visit (100px). These are observed section values, not a fabricated universal spacing scale.
 
-Desktop sections use unequal columns: practice pairs a portrait up to (400px) with copy up to (580px), services uses (1fr/1.35fr), and visit uses (1fr/1.2fr). The selected homepage photo sequence has three unequal adjoining panels; its exact composition belongs to the surface brief rather than every future screen.
+Desktop sections use unequal columns: practice pairs a portrait up to (400px) with copy up to (580px), services uses (1fr/1.35fr), and visit uses (1fr/1.2fr). The November 6 approved hero refinement uses a single wide courtyard photograph and a white editorial panel flush with its lower-right edge. The headline, supporting copy and Plan Your Visit anchor are grouped in this panel. Bryan approved this hero and authorized its publication to the existing Pages review site on November 6. Whole-homepage approval remains separate.
 
-At (1100px) and below, navigation gaps and section spacing tighten. At (760px) and below, content becomes a vertical sequence, the header becomes (82px), and an explicit menu control reveals stacked navigation. The inset becomes fixed. The photo sequence retains one broad image above two smaller adjoining views. A fixed phone bar has a minimum height of (65px), bottom safe-area padding, and corresponding page bottom clearance. The (360px) breakpoint reduces logo, type, and image sizes.
+At (1100px) and below, navigation gaps and section spacing tighten. At (760px) and below, content becomes a vertical sequence, the header becomes (82px), and an explicit menu control reveals stacked navigation. The inset becomes fixed. The hero becomes a headline, single broad courtyard image, supporting copy and visit action in reading order. A fixed phone bar has a minimum height of (65px), bottom safe-area padding, and corresponding page bottom clearance. The (360px) breakpoint reduces logo, type, and image sizes.
 
 Anchor scrolling reserves (120px) above targets on desktop and (92px) on mobile. Service disclosures add their own scroll margin. Preserve these clearances when changing sticky navigation.
 
@@ -159,7 +159,7 @@ Native `details` and `summary` elements form a ruled list on the wash background
 
 ### Photography And Captions
 
-Real office images use explicit dimensions and controlled `object-fit: cover` crops. The adjoining photo sequence places compact white caption tabs against each image's lower edge. Portrait and location images use captions beneath the image. The location caption uses Archivo at (14px) on desktop and (13px) on mobile, keeping it subordinate to the section heading. Content images are not decorative substitutes for evidence; their alternatives describe the actual person, room, or location.
+Real office images use explicit dimensions and controlled `object-fit: cover` crops. The hero uses a restrained factual caption rail beneath the photograph/editorial composition. Portrait and location images use captions beneath the image. The location caption uses Archivo at (14px) on desktop and (13px) on mobile, keeping it subordinate to the section heading. Content images are not decorative substitutes for evidence; their alternatives describe the actual person, room, or location.
 
 ### Mobile Call Bar
 
