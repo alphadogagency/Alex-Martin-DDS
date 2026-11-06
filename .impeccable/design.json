@@ -166,14 +166,14 @@
         "purpose": "Rotate the plus icon 45 degrees when open; no transition for reduced motion."
       },
       {
-        "name": "photo-settle",
-        "value": "scale(1.035) to scale(1), 650ms cubic-bezier(.2,.7,.3,1)",
-        "purpose": "Three lower photos settle once on view; disabled at reduced-motion load and cancelled when preference changes."
-      },
-      {
         "name": "control-feedback",
         "value": "180ms ease-out",
         "purpose": "Button background and arrow movement; transitions disabled for reduced motion."
+      },
+      {
+        "name": "on-view-fade",
+        "value": "opacity 0 to 1, 650ms cubic-bezier(.2,.7,.3,1)",
+        "purpose": "One-shot doctor copy/portrait, services intro/list and reception photo fades. Initial viewport, focus/anchor targets and reduced motion are immediately visible; default content remains visible without enhancement."
       }
     ],
     "breakpoints": [
@@ -264,7 +264,7 @@
       "Original logo and navy/sage brand identity.",
       "Real practice photography, softly rounded frames and compact captions.",
       "Open display typography, readable body copy, and restrained rules.",
-      "Flat surfaces, visible keyboard focus and purposeful reduced-motion-aware photo settling."
+      "Flat surfaces, visible keyboard focus and purposeful reduced-motion-aware opacity fades."
     ],
     "rules": [
       {
