@@ -48,6 +48,7 @@ components:
     backgroundColor: "{colors.ink}"
     textColor: "{colors.paper}"
     padding: "16px 20px"
+    borderRadius: "8px"
   button-primary-hover:
     backgroundColor: "{colors.ink-hover}"
   text-link:
@@ -64,123 +65,44 @@ components:
 
 # Design System: Alex Martin DDS
 
-## Overview
+## Approved Hosted Preview Revision — November 6, 2026
 
-**Creative North Star: "The Scottsdale Journal"**
+**Creative North Star: The Scottsdale Journal.** Retain the original logo, ink/sage/white palette, Tenor Sans display typography and Archivo body text. Real courtyard, doctor, waiting-room and reception photographs tell the story of this Scottsdale practice. Editorial rules and unequal adjoining compositions organize the page.
 
-The Scottsdale Journal uses white photo-paper space, the original navy and sage identity, and rectangular photography to introduce the real practice. Tenor Sans gives headings an open, measured character; Archivo keeps supporting copy direct and readable. Thin rules and changes in background organize the page without ornamental containers.
+Bryan approved this whole-homepage refinement on November 6 and explicitly requested committing and pushing it to update the existing hosted preview. This supersedes the earlier local-only boundary. Approval of this preview does not authorize additional pages or production-domain launch.
 
-Bryan selected this direction on the code-first direction board. This document captures the implemented homepage system; the completed homepage is still awaiting review and approval. The first-surface composition remains in `.impeccable/surfaces/src-pages-index-astro.md`. This record does not authorize additional pages or publication.
+## Colors And Typography
 
-**Key Characteristics:**
+Frontmatter names the actual color and typography roles. Ink #23434f carries text, controls and the closing contact panel; sage #a0ae95 remains the original brand accent. White and wash #eef1eb alternate reading surfaces. No gradients, shadows or decorative replacement palette. White on ink and ink on white/wash carry body text; sage is not body text on white.
 
-- Original logo and navy/sage brand identity.
-- Real practice photographs with rectangular crops and compact captions.
-- Open display typography, readable body copy, and restrained rules.
-- Flat surfaces, visible keyboard focus, and minimal motion.
+Tenor Sans headings use regular weight and balanced wrapping except the deliberately composed hero. Archivo body text is 17px desktop and 16px mobile, with line-height 1.65 (hero 1.55). Headings use the documented fluid roles. Context-specific exceptions: care band clamp(26px,2.2vw,36px), mobile29px; mobile doctor/services35px and visit38px; phone clamp(29px,2.5vw,38px), mobile32px/narrow28px. Header navigation15px (14px tablet), captions13px (11px hero mobile), mobile bar13px (12px narrow). These supporting sizes are intentional, not additional headline roles.
 
-## Colors
+## Composition And Spacing
 
-The original blue-green ink and muted sage sit on white photo-paper, with a pale green wash for quieter reading areas. Frontmatter values are normative and preserve the source CSS notation. The sidecar’s tonal ramps are derived panel previews, not additional implementation tokens or approved palette choices.
+Shared inset clamp(24px,3.75vw,72px), mobile24px; body capped at1920px on wide displays. Sticky white header100px desktop,82px mobile. Anchor clearance120px desktop/92px mobile. Footer retains a restrained logo, practice descriptor, phone and copyright.
 
-### Primary
+- Hero: one original courtyard photograph, height clamp(500px,40vw,650px), with a white lower-right editorial panel (49% width, capped650px). Headline/copy/Plan Your Visit are grouped. A compact factual caption rail follows. Tablet uses500px height and a53% editorial panel. Mobile reorders headline,250px photograph, copy and action; narrow image210px.
+- Care introduction: a compact three-column ruled strip on white. At tablet the action sits under the body column; mobile stacks naturally. This replaces the full-width dark band, reserving ink for the final invitation.
+- Doctor: copy left and high-resolution original portrait right, generous but bounded gap and88px vertical padding. Portrait uses a4/4.8 crop with the face retained. One pale-sage offset backplate adds depth without a shadow and is included in the layout footprint. Mobile copy precedes a square portrait, with56px section padding.
+- Services: wash background, intro/real waiting-room photo left and ruled disclosure list right;76px vertical padding. The first family-care row is initially open to reveal how the list works. Other rows stay independent native disclosures. Mobile places the image before the list with54px section padding.
+- Contact: rounded adjoining reception photo and ink information panel, inset from page edges with80px desktop margins. Phone, address and directions remain readable and actionable. Mobile stacks a240px photo above the panel with52px outer vertical margins.
 
-- **Practice Ink** (`ink`): primary text, filled call actions, and the dark care band.
-- **Ink Hover** (`ink-hover`): hover state for the filled call button and mobile phone bar.
+## Shapes And Controls
 
-### Secondary
+Media and the contact composition use24px radii (20px mobile outer hero/contact); filled buttons8px. The white editorial panel has one softened upper-left corner. Flat rules still structure the page; there is no repeated rounded-card grid.
 
-- **Brand Sage** (`sage`): the original logo accent, text-selection background, light-link rule, and mobile-call focus ring. It is not used as body text on white.
-- **Focus Green** (`focus`): the default high-visibility keyboard outline.
+Primary links are ink buttons with white text and at least50px height. Text links use an arrow, bottom rule and minimum44px height. Visible focus outlines remain; dark-panel focus is white. Phone actions use the verified tel destination. Plan Your Visit and Plan A Visit point to the actual contact section, not a simulated booking form.
 
-### Neutral
+Mobile menu exposes aria-expanded/aria-controls and closes on link selection, Escape, outside click and desktop breakpoint changes. Escape restores focus to Menu. The fixed phone bar retains its65px clearance and safe-area padding. Native service disclosures preserve keyboard semantics and visible focus; the plus rotates45deg when open.
 
-- **Photo Paper** (`paper`): the main canvas, masthead, photo captions, and text on dark surfaces.
-- **Quiet Wash** (`wash`): service-section background.
-- **Soft Rule** (`rule`): masthead, mobile menu, and footer boundaries.
-- **Muted Caption** (`caption-muted`): secondary photograph-note text.
-- **Disclosure Rule** (`disclosure-rule`): service-list separators.
+## Motion And Accessibility
 
-**The Brand Continuity Rule.** Preserve the original logo and its ink/sage relationship; the supporting neutrals serve the selected identity.
+Three lower-section photographs settle once from scale1.035 to1 over650ms as they enter view; no content is hidden before JavaScript. Controls have180ms background/arrow feedback, disclosures250ms icon rotation, and anchors smooth scrolling. No animation dependency was added. Reduced-motion at load prevents observer setup; preference changes disconnect it and cancel running animations. CSS disables smooth scrolling and decorative transitions under reduced motion.
 
-## Typography
+All images have meaningful alternatives and explicit intrinsic dimensions; lower images are lazy loaded, hero high priority with960/1440 responsive sources. Fonts are local. Titles capitalize each word while preserving proper names/acronyms. No invented proof, discounts, emergency hero, new pages or fake-working forms.
 
-**Display Font:** Tenor Sans, with sans-serif fallback. **Body Font:** Archivo, with sans-serif fallback. Fontsource provides local Latin font files. Tenor Sans uses its regular weight; Archivo loads regular, medium, and semibold, with medium used for the mobile phone number.
+## Verification And Stage
 
-The display face supplies spacious, rounded letterforms without rounded containers. Body copy stays matter-of-fact. There is no separate mono or decorative label face.
+Built with the existing Astro static configuration. Codex browser review covers1440×1000,1280×800,390×844 and320×740, section navigation, native disclosure keyboard activation, mobile menu/Escape, image/font loading, sticky header and overflow. Independent screenshot-only review:8.6/10, no required design fixes. Source detector reports advisory font-ramp differences only; actual sizes are described above. Reduced-motion branches were checked in an isolated source harness, not through an OS preference toggle. Physical devices and a full cross-browser audit remain outside this pass.
 
-### Hierarchy
-
-- **Display:** the main heading uses the frontmatter display role. At widths up to (1100px), it uses `clamp(36px,4.3vw,47px)`; up to (760px), `clamp(34px,8.8vw,60px)` with line-height (1.1); up to (360px), (30px).
-- **Headline:** section headings use the frontmatter headline role. Compact band headings and mobile sections have context-specific overrides in the stylesheet.
-- **Title:** service titles use the frontmatter title role; mobile titles use (24px), reducing to (22px) at the narrowest breakpoint.
-- **Body:** most prose uses the body role, reducing to (16px) on mobile. Text measures vary with purpose: practice copy is limited to (54ch), service details to (55ch), and compact introductions to approximately (33–35ch).
-- **Label:** the caption rail uses the label role; mobile photo captions reduce to (11px). Navigation uses (15px), then (14px) below the tablet breakpoint.
-
-**The Readable Hierarchy Rule.** Keep display type for headings and the prominent phone number; use Archivo for navigation, body copy, captions, and ordinary actions.
-
-## Layout
-
-The canvas is fluid with a shared inline inset. Above (1700px), the body is centered with a maximum width of (1920px). The base desktop header is (100px) tall. Major content sections use generous vertical space: practice (110px), services (85px/100px), and visit (100px). These are observed section values, not a fabricated universal spacing scale.
-
-Desktop sections use unequal columns: practice pairs a portrait up to (400px) with copy up to (580px), services uses (1fr/1.35fr), and visit uses (1fr/1.2fr). The November 6 approved hero refinement uses a single wide courtyard photograph and a white editorial panel flush with its lower-right edge. The headline, supporting copy and Plan Your Visit anchor are grouped in this panel. Bryan approved this hero and authorized its publication to the existing Pages review site on November 6. Whole-homepage approval remains separate.
-
-At (1100px) and below, navigation gaps and section spacing tighten. At (760px) and below, content becomes a vertical sequence, the header becomes (82px), and an explicit menu control reveals stacked navigation. The inset becomes fixed. The hero becomes a headline, single broad courtyard image, supporting copy and visit action in reading order. A fixed phone bar has a minimum height of (65px), bottom safe-area padding, and corresponding page bottom clearance. The (360px) breakpoint reduces logo, type, and image sizes.
-
-Anchor scrolling reserves (120px) above targets on desktop and (92px) on mobile. Service disclosures add their own scroll margin. Preserve these clearances when changing sticky navigation.
-
-## Elevation & Depth
-
-The implementation has no box shadows, gradients, blur, or simulated material depth. White, wash, and ink backgrounds establish sections; thin rules establish boundaries. The sticky header and mobile call bar use stacking order for function, not visual elevation. Keep this flat character when extending existing components.
-
-Motion is limited to smooth anchor scrolling and a short service-icon rotation. Reduced-motion preferences disable smooth scrolling and the icon transition.
-
-## Shapes
-
-Photographs, buttons, caption tabs, and section surfaces have square corners. Thin horizontal rules carry structure. There is no reusable rounded-card vocabulary and no radius scale in the code. SVG arrows and plus signs use open strokes with round line caps and joins; their strokes do not change the rectangular surface language.
-
-## Components
-
-### Buttons
-
-Filled call actions are direct rectangular links, using ink with paper text, a minimum height of (50px), and the primary-button padding in frontmatter. Hover changes to the ink-hover color and suppresses the ordinary link underline. Keyboard focus uses an outline offset of (4px). No disabled, loading, or submission state exists because these are telephone links.
-
-### Text Links
-
-Editorial actions pair text with an inline arrow and a bottom rule. They have a minimum height of (44px) and a gap of (20px). Hover thickens the rule; ordinary text links elsewhere use an underline. Light links inherit white text over ink, use a sage rule, and receive a white focus outline. The prominent telephone link uses the display face without an arrow.
-
-### Navigation
-
-The sticky white masthead contains the original logo, three section anchors, and a phone action. Desktop navigation is horizontal. Mobile navigation is initially hidden and controlled by a real button exposing `aria-expanded` and `aria-controls`. Choosing a link, pressing Escape, clicking outside the header, or crossing the desktop breakpoint closes the menu. Escape returns focus to its control. The mobile menu has a bottom rule and no overlay or shadow.
-
-### Service Disclosures
-
-Native `details` and `summary` elements form a ruled list on the wash background. Summaries use display titles, generous block padding, and an inline plus icon. Opening a row reveals body copy and a telephone link; the plus rotates to (45deg) over (.25s ease-out), with no transition in reduced-motion mode. Native disclosure semantics and keyboard behavior remain intact.
-
-### Photography And Captions
-
-Real office images use explicit dimensions and controlled `object-fit: cover` crops. The hero uses a restrained factual caption rail beneath the photograph/editorial composition. Portrait and location images use captions beneath the image. The location caption uses Archivo at (14px) on desktop and (13px) on mobile, keeping it subordinate to the section heading. Content images are not decorative substitutes for evidence; their alternatives describe the actual person, room, or location.
-
-### Mobile Call Bar
-
-A fixed ink bar at the viewport bottom presents a visit prompt and the verified phone number. It shares the filled-button hover color, has a sage inset focus outline, and accounts for the device safe area. It appears only at the mobile breakpoint.
-
-No input, form, chip, card grid, tooltip, or dialog component is implemented. Do not invent these in documentation.
-
-## Do's and Don'ts
-
-### Do:
-
-- Do preserve the original logo and the selected navy/sage identity.
-- Do use actual practice imagery with meaningful alternatives and explicit image dimensions.
-- Do capitalize the first letter of each word in visible titles, headings, and subheadings while preserving proper names and acronyms.
-- Do preserve sticky navigation, visible keyboard focus, reduced-motion behavior, and responsive phone access.
-- Do keep contact actions honest: use verified phone and contact anchors until scheduling is verified.
-
-### Don't:
-
-- Don't replace the chosen direction with generic rounded cards, shadows, or decorative gradients.
-- Don't add invented reviews, credentials, results, or business facts.
-- Don't add discounts, specials, coupon copy, or emergency-led hero headlines.
-- Don't add forms that appear connected without a working destination.
-- Don't treat direction selection as completed-homepage approval or permission to publish.
+Keep staging noindex meta, robots and headers. Bryan approved this version for the hosted review preview. Client approval, further-page instruction and production-domain launch remain separate steps.

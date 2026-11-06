@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-02T17:51:19.611382+00:00",
+  "generatedAt": "2026-11-06T18:00:00Z",
   "title": "Design System: Alex Martin DDS",
   "extensions": {
     "colorMeta": {
@@ -164,6 +164,16 @@
         "name": "disclosure-icon",
         "value": "transform .25s ease-out",
         "purpose": "Rotate the plus icon 45 degrees when open; no transition for reduced motion."
+      },
+      {
+        "name": "photo-settle",
+        "value": "scale(1.035) to scale(1), 650ms cubic-bezier(.2,.7,.3,1)",
+        "purpose": "Three lower photos settle once on view; disabled at reduced-motion load and cancelled when preference changes."
+      },
+      {
+        "name": "control-feedback",
+        "value": "180ms ease-out",
+        "purpose": "Button background and arrow movement; transitions disabled for reduced motion."
       }
     ],
     "breakpoints": [
@@ -183,6 +193,20 @@
         "name": "narrow-max",
         "value": "360px"
       }
+    ],
+    "radii": [
+      {
+        "name": "media",
+        "value": "24px"
+      },
+      {
+        "name": "mobile-outer-media",
+        "value": "20px"
+      },
+      {
+        "name": "button",
+        "value": "8px"
+      }
     ]
   },
   "components": [
@@ -192,7 +216,7 @@
       "refersTo": "button-primary",
       "description": "The actual masthead telephone action.",
       "html": "<a class=\"ds-button\" href=\"tel:+14808601993\">Call (480) 860-1993</a>",
-      "css": ".ds-button{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:inline-flex;align-items:center;justify-content:center;background:var(--ink,#23434f);color:#fff;min-height:50px;padding:16px 20px;white-space:nowrap;font-size:15px;text-decoration:none}.ds-button:hover{background:#355966;text-decoration:none}.ds-button:focus-visible{outline:3px solid #61764f;outline-offset:4px}"
+      "css": ".ds-button{font-family:var(--body,'Archivo',sans-serif);color:var(--ink,#23434f);display:inline-flex;align-items:center;justify-content:center;background:var(--ink,#23434f);color:#fff;border-radius:8px;min-height:50px;padding:16px 20px;white-space:nowrap;font-size:15px;text-decoration:none}.ds-button:hover{background:#355966;text-decoration:none}.ds-button:focus-visible{outline:3px solid #61764f;outline-offset:4px}"
     },
     {
       "name": "Editorial Text Link",
@@ -235,12 +259,12 @@
   ],
   "narrative": {
     "northStar": "The Scottsdale Journal",
-    "overview": "The Scottsdale Journal uses white photo-paper space, the original navy and sage identity, and rectangular photography to introduce the real practice. Tenor Sans gives headings an open, measured character; Archivo keeps supporting copy direct and readable. Thin rules and changes in background organize the page without ornamental containers.\n\nBryan selected this direction on the code-first direction board. This document captures the implemented homepage system; the completed homepage is still awaiting review and approval. The first-surface composition remains in `.impeccable/surfaces/src-pages-index-astro.md`. This record does not authorize additional pages or publication.\n\nNovember 6 approved hero refinement: one wide original courtyard photograph with a white lower-right editorial panel grouping the unchanged headline and introduction with Plan Your Visit. Mobile presents headline, image, copy and action in sequence. No other homepage sections changed. Bryan approved this hero and authorized publication to the existing Pages review site on November 6. Whole-homepage approval remains separate.",
+    "overview": "Approved November 6 whole-homepage refinement within The Scottsdale Journal: compact rounded courtyard cover, ruled care introduction, copy-led doctor section with original high-resolution portrait and one offset wash backplate, waiting-room service introduction, and reception photo adjoining an ink contact panel. Original logo, navy/sage/white, Tenor Sans/Archivo and verified copy retained. Bryan approved this version and explicitly requested commit/push to update the hosted review preview. Additional pages and production-domain launch remain separate.",
     "keyCharacteristics": [
       "Original logo and navy/sage brand identity.",
-      "Real practice photographs with rectangular crops and compact captions.",
+      "Real practice photography, softly rounded frames and compact captions.",
       "Open display typography, readable body copy, and restrained rules.",
-      "Flat surfaces, visible keyboard focus, and minimal motion."
+      "Flat surfaces, visible keyboard focus and purposeful reduced-motion-aware photo settling."
     ],
     "rules": [
       {
@@ -262,7 +286,7 @@
       "Do keep contact actions honest: use verified phone and contact anchors until scheduling is verified."
     ],
     "donts": [
-      "Don't replace the chosen direction with generic rounded cards, shadows, or decorative gradients.",
+      "Don't replace the chosen photographic journal with repeated cards, shadows or decorative gradients.",
       "Don't add invented reviews, credentials, results, or business facts.",
       "Don't add discounts, specials, coupon copy, or emergency-led hero headlines.",
       "Don't add forms that appear connected without a working destination.",
